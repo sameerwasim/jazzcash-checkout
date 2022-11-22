@@ -1,6 +1,6 @@
 {
   "name": "jazzcash-checkout",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Payment method integration package for Jazzcash.",
   "main": "index.js",
   "scripts": {

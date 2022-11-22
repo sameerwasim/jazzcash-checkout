@@ -66,7 +66,7 @@ const Jazzcash = {
   error: false,
   secureHash: "",
   initialized: false,
-  envoirment: "sandbox",
+  environment: "sandbox",
   liveURL: "https://payments.jazzcash.com.pk",
   sandboxURL: "https://sandbox.jazzcash.com.pk",
   data: {
@@ -106,7 +106,7 @@ Jazzcash.credentials = (credentials) => {
         password: config.password,
         hashKey: config.hashKey,
       };
-      Jazzcash.envoirment = credentials.envoirment || Jazzcash.envoirment;
+      Jazzcash.environment = credentials.environment || Jazzcash.environment;
       Jazzcash.initialized = true;
     } else {
       throw "Credentials are missing or of invalid length";
@@ -201,7 +201,7 @@ Jazzcash.createRequest = async (request) => {
 
 const createHash = (request) => {
   if (urls[request]) {
-    Jazzcash.url = (Jazzcash.envoirment == "live" ? Jazzcash.liveURL : Jazzcash.sandboxURL) + urls[request];
+    Jazzcash.url = (Jazzcash.environment == "live" ? Jazzcash.liveURL : Jazzcash.sandboxURL) + urls[request];
     const hashFields = fields[request];
 
     var unhashedString = Jazzcash.config.hashKey;
