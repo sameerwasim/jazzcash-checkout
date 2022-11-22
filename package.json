@@ -1,0 +1,14 @@
+{
+  "name": "jazzcash-checkout",
+  "version": "1.0.0",
+  "description": "Payment method integration package for Jazzcash.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "jazzcash"
+  ],
+  "author": "Sameer",
+  "license": "ISC"
+}
